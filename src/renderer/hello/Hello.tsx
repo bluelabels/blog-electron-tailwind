@@ -1,3 +1,7 @@
 export default function Hello() {
-  return <div>Empty content</div>;
+  return (
+    <div>
+      <div className="bg-green-400 dark:bg-green-900">content</div>
+    </div>
+  );
 }
