@@ -87,7 +87,14 @@ const configuration: webpack.Configuration = {
       },
       // SVG
       {
-        test: /\.svg$/,
+        test: /\.svg$/i,
+        type: 'asset/resource',
+        resourceQuery: /url/, // *.svg?url
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
         use: [
           {
             loader: '@svgr/webpack',
@@ -101,7 +108,6 @@ const configuration: webpack.Configuration = {
               ref: true,
             },
           },
-          'file-loader',
         ],
       },
     ],

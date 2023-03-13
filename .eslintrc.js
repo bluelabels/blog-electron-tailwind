@@ -8,6 +8,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-import-module-exports': 'off',
+    'import/no-duplicates': ['error', { considerQueryString: true }],
   },
   parserOptions: {
     ecmaVersion: 2020,

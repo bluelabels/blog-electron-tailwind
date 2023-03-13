@@ -1,8 +1,7 @@
 import DogJpgImage from './assets/dog.jpg';
 import DogPngImage from './assets/dog.png';
-import DogSvgImageUrl, {
-  ReactComponent as DogSvgImage,
-} from './assets/dog.svg';
+import DogSvgImage from './assets/dog.svg';
+import DogSvgImageUrl from './assets/dog.svg?url';
 
 export default function Hello() {
   return (
@@ -21,7 +20,7 @@ export default function Hello() {
       </div>
       <div>
         <h1 className="text-3xl">dog.svg as ReactComponent</h1>
-        <DogSvgImage className="h-[300px] w-fit" />
+        <DogSvgImage className="h-[200px] w-fit" />
       </div>
     </div>
   );
