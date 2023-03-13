@@ -1,4 +1,4 @@
-import 'webpack-dev-server';
+import 'webpack-dev-server'; // eslint-disable-line
 import path from 'path';
 import fs from 'fs';
 import webpack from 'webpack';
@@ -129,6 +129,11 @@ const configuration: webpack.Configuration = {
             },
           },
         ],
+      },
+      // Sound
+      {
+        test: /\.(mp3|wav)$/i,
+        type: 'asset/resource',
       },
     ],
   },

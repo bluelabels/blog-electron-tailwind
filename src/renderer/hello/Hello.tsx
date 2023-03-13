@@ -1,27 +1,27 @@
-import DogJpgImage from './assets/dog.jpg';
-import DogPngImage from './assets/dog.png';
-import DogSvgImage from './assets/dog.svg';
-import DogSvgImageUrl from './assets/dog.svg?url';
+import Mp3Sound from './assets/sound.mp3';
+import WavSound from './assets/sound.wav';
 
 export default function Hello() {
+  const SampleWavSound = new Audio(WavSound);
+
   return (
-    <div className="flex">
+    <div className="flex flex-col space-y-5">
       <div>
-        <h1 className="text-3xl">dog.jpg</h1>
-        <img src={DogJpgImage} alt="dog" className="h-[400px] w-fit" />
+        <h1>mp3 파일 재생</h1>
+        <audio controls src={Mp3Sound} />
       </div>
       <div>
-        <h1 className="text-3xl">dog.png</h1>
-        <img src={DogPngImage} alt="dog" className="h-[400px] w-fit" />
+        <h1>wav 파일 재생1</h1>
+        <audio controls src={WavSound} />
       </div>
-      <div>
-        <h1 className="text-3xl">dog.svg</h1>
-        <img src={DogSvgImageUrl} alt="dog" className="h-[400px] w-fit" />
-      </div>
-      <div>
-        <h1 className="text-3xl">dog.svg as ReactComponent</h1>
-        <DogSvgImage className="h-[200px] w-fit" />
-      </div>
+      <button
+        type="button"
+        onClick={() => {
+          SampleWavSound.play();
+        }}
+      >
+        wav 파일 재생2
+      </button>
     </div>
   );
 }

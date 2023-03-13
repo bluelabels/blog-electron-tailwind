@@ -110,6 +110,11 @@ const configuration: webpack.Configuration = {
           },
         ],
       },
+      // Sound
+      {
+        test: /\.(mp3|wav)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 

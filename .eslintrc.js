@@ -9,6 +9,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/no-import-module-exports': 'off',
     'import/no-duplicates': ['error', { considerQueryString: true }],
+    'jsx-a11y/media-has-caption': 'off',
   },
   parserOptions: {
     ecmaVersion: 2020,
