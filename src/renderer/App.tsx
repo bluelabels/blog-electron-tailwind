@@ -35,6 +35,9 @@ function Hello() {
           </button>
         </a>
       </div>
+      <div className="flex items-center bg-pink-200">
+        <h1 className="text-blue-700">ERB with Tailwind</h1>
+      </div>
     </div>
   );
 }
